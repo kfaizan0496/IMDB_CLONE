@@ -31,3 +31,4 @@ function movieinformation() {
     </div>`;
   }
 }
+movieinformation();
