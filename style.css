@@ -53,3 +53,46 @@ div {
 #fav-btn {
   margin-left: 10%;
 }
+
+.headings {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin: auto;
+  color: white;
+}
+#movies-list {
+  height: auto;
+  width: 65vw;
+  background-color: black;
+  position: relative;
+  /* display: block; */
+  margin-left: 30%;
+  padding-left: 30%;
+}
+.bg-color {
+  color: red;
+}
+.movie-details {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  margin-left: 200px;
+  left: 30%;
+}
+
+#fav_movie {
+  position: relative;
+  margin-left: 35%;
+}
+
+.animate:hover {
+  transform: scale(1.2);
+}
+
+.movie-info {
+  text-align: center;
+  font-size: 16px;
+  font-style: senserif;
+  font-weight: 600;
+}
