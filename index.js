@@ -39,3 +39,15 @@ searchText.addEventListener("input", (e) => {
   };
   fetchApi();
 });
+
+//  when user click  info button to show all information related about that movie
+
+function movieInfo(event) {
+  let results = JSON.parse(localStorage.getItem("results")) || [];
+  let current_movie_item = results[Number(event.target.id)];
+  localStorage.setItem(
+    "current_movie_item",
+    JSON.stringify(current_movie_item)
+  );
+  window.location.assign("movie.html");
+}
