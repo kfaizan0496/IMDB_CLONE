@@ -1,7 +1,7 @@
 let favm = document.getElementById("fav_movie");
 
-// Use of this function when user click on favourite button and we will fetch favmovie by id saved in local storage and display it.
-function renderMovie() {
+//  when user click on Favourites Button it will redirect the page into same tab and showing all the favourites movies
+function renderFavMovie() {
   let favMovieList = document.querySelector("#fav_movie");
   if (favMovieList) favMovieList.innerHTML = "";
   let favMovieArray = localStorage.getItem("favMovieArrayStorage");
@@ -15,7 +15,7 @@ function renderMovie() {
       const Title = el.Title;
       const Poster = el.Poster;
 
-      // for showing list of favourite movie
+      //   Rendering favourites movies
       favm.innerHTML += ` 
    <ul>
     <li>
@@ -27,7 +27,7 @@ function renderMovie() {
   </li>
   <ul>`;
 
-      // Use of this function for removing the movie from the favourite list
+      // remove the movie from favourite list
       let Unfavouritelist = document.querySelectorAll("#delete");
       Unfavouritelist.forEach((remove) => {
         remove.addEventListener("click", function () {
@@ -43,10 +43,10 @@ function renderMovie() {
             "favMovieArrayStorage",
             JSON.stringify(filteredFavMovie)
           );
-          renderMovie();
+          renderFavMovie();
         });
       });
     });
   }
 }
-renderMovie();
+renderFavMovie();
