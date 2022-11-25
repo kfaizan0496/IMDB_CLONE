@@ -26,6 +26,26 @@ function renderMovie() {
   </div>
   </li>
   <ul>`;
+
+      // Use of this function for removing the movie from the favourite list
+      let Unfavouritelist = document.querySelectorAll("#delete");
+      Unfavouritelist.forEach((remove) => {
+        remove.addEventListener("click", function () {
+          let favmovie =
+            JSON.parse(localStorage.getItem("favMovieArrayStorage")) || [];
+          let text = remove.parentElement.innerText.split("\n")[0];
+          console.log("text", favmovie[0].Title === text);
+          let filteredFavMovie = favmovie.filter(
+            (movie) => movie.Title !== text
+          );
+          console.log("filtered array", filteredFavMovie);
+          localStorage.setItem(
+            "favMovieArrayStorage",
+            JSON.stringify(filteredFavMovie)
+          );
+          renderMovie();
+        });
+      });
     });
   }
 }
