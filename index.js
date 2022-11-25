@@ -51,3 +51,28 @@ function movieInfo(event) {
   );
   window.location.assign("movie.html");
 }
+
+function favMovieItems(e) {
+  const first = e.target.name.split(" ");
+  const movieName = first[0] + first[1];
+  console.log("details", movieName);
+  if (e.target.innerHTML == "Favourite") {
+    e.target.innerHTML = "Added To Favourites";
+    e.target.style.backgroundColor = "orange";
+    let favMovieArrayStorage =
+      JSON.parse(localStorage.getItem("favMovieArrayStorage")) || [];
+
+    console.log("favMovieArrayStorage", favMovieArrayStorage);
+
+    let results = JSON.parse(localStorage.getItem("results")) || [];
+    console.log("results", results);
+    favMovieArrayStorage.push(results[Number(e.target.id)]);
+
+    localStorage.setItem(
+      "favMovieArrayStorage",
+      JSON.stringify(favMovieArrayStorage)
+    );
+    e.target.value = " ";
+    console.log("favMovieArrayStorage", favMovieArrayStorage);
+  }
+}
