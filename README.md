@@ -30,3 +30,4 @@ i. movie page to show information (image,title,rating ,plot  ,released date ) of
 ![Screenshot (557)](https://user-images.githubusercontent.com/113850768/204038830-9948739a-d8fc-4bb9-8490-acd5def94a21.png)
 ![Screenshot (558)](https://user-images.githubusercontent.com/113850768/204038842-07fecfbf-7a69-416c-9c49-9ef8e6c18f08.png)
 ![Screenshot (561)](https://user-images.githubusercontent.com/113850768/204038850-865c0938-8605-465c-a2cd-7ad6b2a964f0.png)
+![Screenshot (564)](https://user-images.githubusercontent.com/113850768/204040332-69035278-8516-482d-9bbc-76bd0d90d5da.png)
