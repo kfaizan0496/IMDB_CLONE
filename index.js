@@ -20,6 +20,7 @@ searchText.addEventListener("input", (e) => {
     const Title = data.Title;
     const Poster = data.Poster;
     currentMovieLists = data;
+    // rendering a html element when user type in search bar
     moviesContainer.innerHTML += `  <div mt-5 class="card-body " >
      <h5  style="color:white; text-align:justify ;margin-top :10px" class="card-title">${Title}</h5>
     
@@ -52,6 +53,8 @@ function movieInfo(event) {
   window.location.assign("movie.html");
 }
 
+//  when user clicks on  favourite button to add a movie into favourite list
+
 function favMovieItems(e) {
   const first = e.target.name.split(" ");
   const movieName = first[0] + first[1];
@@ -66,8 +69,10 @@ function favMovieItems(e) {
 
     let results = JSON.parse(localStorage.getItem("results")) || [];
     console.log("results", results);
+    //  add movie to favMovieArrayStorage
     favMovieArrayStorage.push(results[Number(e.target.id)]);
 
+    // pass the favMovieArrayStorage into local storage to access favouriteMovie.js
     localStorage.setItem(
       "favMovieArrayStorage",
       JSON.stringify(favMovieArrayStorage)
