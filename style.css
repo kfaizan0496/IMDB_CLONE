@@ -1,6 +1,8 @@
 div {
   display: inline-block;
 }
+/* NAVBAR */
+
 .nav {
   /* text-align: center; */
   margin: 10px auto;
@@ -14,6 +16,8 @@ div {
     justify-content: center;
     align-items: center; */
 }
+
+/* SEARCH CONTAINER */
 .search-container {
   margin-left: 30%;
 }
@@ -35,6 +39,8 @@ div {
   bottom: 3px;
   background-size: cover;
 }
+
+/*  BUTTONS */
 .btn {
   border: 1px solid black;
   border-radius: 5px;
@@ -54,6 +60,7 @@ div {
   margin-left: 10%;
 }
 
+/*  MAIN HEADINGS OF HTML PAGE */
 .headings {
   display: flex;
   justify-content: center;
@@ -86,6 +93,7 @@ div {
   margin-left: 35%;
 }
 
+/* ANIMATE */
 .animate:hover {
   transform: scale(1.2);
 }
