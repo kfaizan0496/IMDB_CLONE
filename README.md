@@ -1,3 +1,6 @@
+
+  Your site is live at https://kfaizan0496.github.io/IMDB_CLONE/
+
 About App :- This is an IMDB Clone  project of Web Development.
              In this project, I used HTML5, CSS3 and purely Vanilla  JavaScript.
 
