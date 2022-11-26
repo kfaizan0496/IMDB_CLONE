@@ -8,7 +8,7 @@ let currentMovieLists = {};
 // triggred an event when user type inside in search box
 
 searchText.addEventListener("input", (e) => {
-  const url = `http://www.omdbapi.com/?apikey=6440a370&t=${e.target.value}`;
+  const url = `https://www.omdbapi.com/?apikey=6440a370&t=${e.target.value}`;
 
   const fetchApi = async function () {
     const response = await fetch(url);
