@@ -1,6 +1,7 @@
 let favm = document.getElementById("movie-details");
 
-// When user click on detail button and we will fetch current movie saved in local storage and display it.
+// When user click on info button it  will fetch from  current movie array
+// saved in local storage and display it in movie.html file
 function movieinformation() {
   let movieListItem = document.querySelector("#movie-details");
   if (movieListItem) movieListItem.innerHTML = "";
@@ -15,6 +16,7 @@ function movieinformation() {
     const info = savedMovie.Plot;
     const released = savedMovie.Released;
     const imdbRating = savedMovie.imdbRating;
+    // rendering a movied card to show all related about that
     favm.innerHTML += `
       <div class="card cen" style="width: 17rem;  left:130% ">
        <img src="${Poster}" class="card-img-top"  alt="..."  width="300" height="400">

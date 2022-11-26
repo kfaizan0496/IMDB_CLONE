@@ -1,7 +1,11 @@
+// fetch all ids of home page
+
 var searchText = document.getElementById("inputSearch");
 var moviesContainer = document.getElementById("movies-list");
 
 let currentMovieLists = {};
+
+// triggred an event when user type inside in search box
 
 searchText.addEventListener("input", (e) => {
   const url = `http://www.omdbapi.com/?apikey=6440a370&t=${e.target.value}`;
@@ -16,7 +20,7 @@ searchText.addEventListener("input", (e) => {
     results.push(data);
     //  pass the json object into string
     localStorage.setItem("results", JSON.stringify(results));
-    //  extract data of that objects and use in below
+    //  extract data of that objects and used in below
     const Title = data.Title;
     const Poster = data.Poster;
     currentMovieLists = data;
@@ -30,9 +34,13 @@ searchText.addEventListener("input", (e) => {
        results.length - 1
      }" name=${JSON.stringify(
       data
+      // this is Favourite Button when user clicks on this it will  triggred an action
+      //to add that movie in favourite list...
     )} onclick="favMovieItems(event)">Favourite</button>
      <button class="btn btn-dark" id="${
        results.length - 1
+       // this is info Button when user clicks on this it will  triggred an action
+       //to show information of  that movie in a movie.html file
      }" onclick=movieInfo(event)>Info</button>
      
    
